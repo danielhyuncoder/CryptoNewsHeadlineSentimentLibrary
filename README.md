@@ -33,3 +33,5 @@
   <li>Get Function: getOverallSentimentOfCryptoByPage(coin_name:str, start_page:int, end_page:int) - gets the coin of which needs to be scanned, and the start and end page (on coindesk) of which the user wishes to scan. It returns a percentage distribution (similar to a what a softmax activation function returns) of how many news headlines were negative, positive, or neutral.</li>
   <li>Get Function: getOverallSentimentOfCryptoByDate(coin_name: str, start_date: int, end_date: int) - gets the coin of which needs to be scanned, and the start and end date range of the news headlines the user wishes to scan (note both the start and end date have to be hashed by the converted_date function in order to work properly). It returns a percentage distribution (similar to a what a softmax activation function returns) of how many news headlines were negative, positive, or neutral.</li>
 </ol>
+<h3>Encrypt Tokenizer Function</h3>
+<li>The encrypt_tokenizer function takes in a Tensorflow Tokenizer and converts the word indexing into a text file. That text file of which can be utilized in the SentimentModel class.</li>
