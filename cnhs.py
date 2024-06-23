@@ -32,7 +32,7 @@ class SentimentModel:
     self.pred_outputs=[0,1,2]
   def set_prediction_outputs(self, output_array):
     self.pred_outputs=output_array
-  def get_prediction(self, txt):
+  def get_prediction(self, txt: str):
     X=[self.tokenizer.text_to_sequence(txt)]
     predictions=self.model.predict(X, verbose=0)
     return self.pred_outputs[np.argmax(predictions[0])]
