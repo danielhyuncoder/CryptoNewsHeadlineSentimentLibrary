@@ -24,6 +24,11 @@ class TextBasedTokenizer:
         sequence.append(self.word_index[word])
     return sequence
 
+def encrypt_tokenizer(tokenizer, file):
+  file = open(file, "w")
+
+  for item in tokenizer.word_index:
+      file.write(str(item) + ":" + str(tokenizer.word_index[item]) + "\n")
 
 class SentimentModel:
   def __init__(self, model_file_path: str, tokenizer_file_path: str):
