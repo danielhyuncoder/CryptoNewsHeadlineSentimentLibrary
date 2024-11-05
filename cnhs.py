@@ -65,7 +65,7 @@ class CryptoSentimentHeadlineScanner:
   def getOverallSentimentOfCryptoByPage(self,coin_name:str, start_page:int, end_page:int):
     coin_name=coin_name.lower()
     if start_page<1:
-      print("Start Page has to be greater than or equal 1")
+      raise BaseException("Error: Start Page has to be greater than or equal 1")
       return
     page=start_page
     text_X=[]
@@ -93,7 +93,7 @@ class CryptoSentimentHeadlineScanner:
   def getOverallSentimentOfCryptoByDate(self, coin_name: str, start_date: int, end_date: int):
     coin_name=coin_name.lower()
     if start_date>end_date:
-      print("Error: Cannot have start date greater than the ending date")
+      raise BaseException("Error: Start Page has to be greater than or equal 1")
       return
     iteration_count=1
     end=False
