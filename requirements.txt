@@ -1,7 +1,5 @@
-streamlit
-seaborn
-matplotlib
 numpy
 pandas
-seaborn
-scipy
+scikit-learn
+tensorflow
+keras
